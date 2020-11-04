@@ -12,4 +12,4 @@ RUN mvn -f /tmp/ clean package
 EXPOSE 5536
 
 # Run the api
-CMD java -jar target/RestfulApi-1.0-SNAPSHOT.jar
+CMD java -jar /tmp/target/RestfulApi-1.0-SNAPSHOT.jar
