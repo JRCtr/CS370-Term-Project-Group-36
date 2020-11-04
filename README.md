@@ -1,6 +1,6 @@
 README
 ======
-----DESCRIPTION----
+----DESCRIPTION----  
 Current version runs a RestfulAPI in a Docker Container. Later versions will include a second Docker Container, both Containers will be run in a Kubernetes Cluster. These will serve as a backend for an application that runs a simple game of Hangman.
 
 All commands must be used while within the CS370-Term-Project-Group-36/ directory.
