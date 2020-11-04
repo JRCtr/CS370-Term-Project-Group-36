@@ -11,8 +11,8 @@ public class RestfulServer{
     }
 
     private void configApi() {
-        Spark.port(8080);
-        System.out.println("Server set to listen on port 8080");
+        Spark.port(5536);
+        System.out.println("Server set to listen on port 5536");
     }
 
     private void processApiRequests(){
