@@ -6,8 +6,7 @@ COPY pom.xml /tmp/pom.xml
 COPY src/main/java/server/RestfulServer.java /tmp/src/main/java/server/RestfulServer.java
 
 # Delete target directory, and then package
-RUN mvn clean install
-RUN mvn package
+RUN mvn -f /tmp/ clean package
 
 # Change server port 5536
 EXPOSE 5536
