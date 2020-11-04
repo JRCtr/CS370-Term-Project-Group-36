@@ -4,8 +4,8 @@ FROM maven:3.6.1
 WORKDIR /
 
 # Import source code for api into maven image
-COPY pom.xml /tmp/RestfulApi/pom.xml
-COPY src/main/java/server/RestfulServer.java /tmp/RestfulApi/src/main/java/server/RestfulServer.java
+COPY pom.xml /tmp/pom.xml
+COPY src/main/java/server/RestfulServer.java /tmp/src/main/java/server/RestfulServer.java
 
 # Delete target directory, and then package
 RUN mvn -f /tmp/ clean package
