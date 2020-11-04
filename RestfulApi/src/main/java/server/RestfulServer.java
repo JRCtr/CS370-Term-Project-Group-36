@@ -24,33 +24,11 @@ public class RestfulServer{
         response.header("Access-Control-Allow-Orgin", "*");
         response.status(200);
 
-        return HttpRequestToJson(request);
+        return printBody(request);
     }
 
-    private String HttpRequestToJson(Request request){
-        return "{\n"
-                + "\"attributes\":\"" + request.attributes() + "\",\n"
-                + "\"body\":\"" + request.body() + "\",\n"
-                + "\"contentLength\":\"" + request.contentLength() + "\",\n"
-                + "\"contentType\":\"" + request.contentType() + "\",\n"
-                + "\"contextPath\":\"" + request.contextPath() + "\",\n"
-                + "\"cookies\":\"" + request.cookies() + "\",\n"
-                + "\"headers\":\"" + request.headers() + "\",\n"
-                + "\"host\":\"" + request.host() + "\",\n"
-                + "\"ip\":\"" + request.ip() + "\",\n"
-                + "\"params\":\"" + request.params() + "\",\n"
-                + "\"pathInfo\":\"" + request.pathInfo() + "\",\n"
-                + "\"serverPort\":\"" + request.port() + "\",\n"
-                + "\"protocol\":\"" + request.protocol() + "\",\n"
-                + "\"queryParams\":\"" + request.queryParams() + "\",\n"
-                + "\"requestMethod\":\"" + request.requestMethod() + "\",\n"
-                + "\"scheme\":\"" + request.scheme() + "\",\n"
-                + "\"servletPath\":\"" + request.servletPath() + "\",\n"
-                + "\"session\":\"" + request.session() + "\",\n"
-                + "\"uri()\":\"" + request.uri() + "\",\n"
-                + "\"url()\":\"" + request.url() + "\",\n"
-                + "\"userAgent\":\"" + request.userAgent() + "\",\n"
-                + "}";
+    private String printBody(Request request){
+       return "Request received with body: " + request.body() + "\n";
     }
 
     public static void main(String[] args){
