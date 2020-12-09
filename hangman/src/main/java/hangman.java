@@ -23,7 +23,7 @@ import java.util.Random;
                                   };
 
             boolean keepPlaying = true;
-            while(keepPlaying){
+            while(keepPlaying){ //loop while game is still going
                 int rand = random.nextInt(dictionary.length);
                 char correctWord[] = dictionary[rand].toCharArray();
                 char guessArray[] = new char[correctWord.length];
@@ -84,7 +84,7 @@ import java.util.Random;
             System.out.println();
         }
 
-        public static boolean isGuessed(char[] array){
+        public static boolean isGuessed(char[] array){ //check if guessed
             boolean result = true;
             for(int i=0; i<array.length; i++){
                 if(array[i] == '*'){
@@ -94,7 +94,7 @@ import java.util.Random;
             return result;
         }
 
-        public static int score(int triesLeft){
+        public static int score(int triesLeft){ //caculate running score
             int score=0;
             switch (triesLeft){
                 case 7: score = 70;
